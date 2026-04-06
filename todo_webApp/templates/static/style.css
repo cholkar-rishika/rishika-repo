@@ -1,0 +1,201 @@
+/* Center everything */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #96e6a1, #d4fc79);
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main card */
+.container {
+    width: 420px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+/* Add Form */
+.add-form {
+    display: flex;
+    gap: 10px;
+}
+
+.add-form input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.add-btn {
+    padding: 12px 18px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #218838;
+}
+
+/* Task List */
+.task-list {
+    margin-top: 20px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    background: #f1f3f5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.edit-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.edit-form input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.update {
+    padding: 8px 12px;
+    background: #007bff;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.update:hover {
+    background: #0069d9;
+}
+
+/* Delete Button */
+.delete {
+    margin-left: 10px;
+    color: #e63946;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.delete:hover {
+    color: #cc2f3b;
+}
+
+/* Show List Button */
+.show-btn {
+    background: #6c5ce7;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.show-btn:hover {
+    background: #5a4bd6;
+}
+
+/* Popup (List View) */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.popup-box {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popup-box li {
+    background: #f1f3f5;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.close-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #cc2f3b;
+}
+.popup-list {
+    list-style: none;
+    padding: 0;
+}
+
+.popup-item {
+    background: #f1f3f5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.popup-edit-form {
+    display: flex;
+    gap: 10px;
+}
+
+.popup-input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.popup-update {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.popup-update:hover {
+    background: #0069d9;
+}
