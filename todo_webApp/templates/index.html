@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini To‑Do List</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>✅ Mini To‑Do List</h1>
+
+    <!-- Show All Tasks Button -->
+    <button class="show-btn" onclick="toggleList()">📋 Show All Tasks</button>
+
+    <!-- Add Task Form -->
+    <form action="/add" method="POST" class="add-form">
+        <input type="text" name="task" placeholder="Enter a new task..." required>
+        <button type="submit" class="add-btn">Add</button>
+    </form>
+
+    <!-- Editable Task List -->
+    <div class="task-list">
+        {% for t in tasks %}
+        <div class="task-item">
+            <form action="/edit/{{t.id}}" method="POST" class="edit-form">
+                <input type="text" name="task" value="{{t.task}}">
+                <button class="update">Update</button>
+            </form>
+
+            <a href="/delete/{{t.id}}" class="delete">✖</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Hidden List Popup -->
+<div id="popup" class="popup">
+    <div class="popup-box">
+        <h2>📋 All Tasks</h2>
+        <ul class="popup-list">
+    {% for t in tasks %}
+    <li class="popup-item">
+        <form action="/edit/{{t.id}}" method="POST" class="popup-edit-form">
+            <input type="text" name="task" value="{{ t.task }}" class="popup-input">
+            <button class="popup-update">Update</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+        <button class="close-btn" onclick="toggleList()">Close</button>
+    </div>
+</div>
+
+<script>
+function toggleList() {
+    const popup = document.getElementById("popup");
+    popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>
